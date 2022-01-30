@@ -5,62 +5,11 @@ let Client = new Discord.Client();
 
 Client.on("message", message => {
 
-if (message.content === "ping") {
+if (message.content === "yt/setwelcomechannel") {
 
-message.channel.send("pong")
-
-}
-
-})
-
-Client.on("message", message => {
-
-if (message.content === "meme") {
-
-message.channel.send("https://www.google.com/search?q=meme&client=firefox-b-d&sxsrf=AOaemvKLqL72tJMLMWDAnt4nErnawrcsJA:1631799924988&tbm=isch&source=iu&ictx=1&fir=lLODzzlfHmoxSM%252C8LkjXcth-iXjoM%252C_&vet=1&usg=AI4_-kQcH3dkxYGk7sOpBaxM0j0E_HyfnA&sa=X&ved=2ahUKEwik5f220IPzAhUghf0HHfE9B_YQ9QF6BAgOEAE#imgrc=lLODzzlfHmoxSM")
+message.channel.send("async (client,message,args)")
 
 }
 
 })
-
-
-Client.on("message", message => {
-
-message.channel.send(":robort:Welcome this our help station!:robort:")
-        
-              `Bot Commands`
-:ghost:`yt/help - to see my commands`:ghost:
-        `yt/setwelcomechannel`
-        Soon Upfate!
-
-})
-module.exports = {
-	name: "yt/setwelcomechannel",
-	run : async (client,message,args)=> {
-
-
-let channel = message.mentions.channels.first()
-
-
-
-if(!channel){
-	message.reply(`mention welcome channel`)
-}
-
-
-client.db.set(`channel_${message.guild.id}`,channel.id)
-
-
-
-message.channel.send(`${channel} has been seted as a welcome channel`)
-
-
-
-
-
-
-	}
-}
-
-
 Client.login("OTM3Mjk0MjQ3MzMyMjgyMzY4.YfZpSg.dSlnx-czSMT4PxytrZY3vqL4a8k")
