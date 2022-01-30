@@ -12,6 +12,7 @@ message.channel.send("
           
               `Bot Commands`
 :ghost:`yt/help - to see my commands`:ghost:
+        `yt/setwelcomechannel`
         Soon Upfate!
 
 })
