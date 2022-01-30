@@ -1,1 +1,44 @@
-odsixzjsdi0jsdoiajkiosda
+let Discord = require("discord.js");
+let Client = new Discord.Client();
+
+
+
+Client.on("message", message => {
+
+if (message.content === "yt/help") {
+
+message.channel.send("
+    :robot:`Welcome this our help station!`:robort:
+          
+              `Bot Commands`
+:ghost:`yt/help - to see my commands`:ghost:
+        Soon Upfate!
+
+})
+module.exports = {
+	name: "yt/setwelcomechannel",
+	run : async (client,message,args)=> {
+
+
+let channel = message.mentions.channels.first()
+
+
+
+if(!channel){
+	message.reply(`mention welcome channel`)
+}
+
+
+client.db.set(`channel_${message.guild.id}`,channel.id)
+
+
+
+message.channel.send(`${channel} has been seted as a welcome channel`)
+
+
+
+
+
+
+	}
+}
