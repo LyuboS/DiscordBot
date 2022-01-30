@@ -1,0 +1,9 @@
+
+client.on('guildMemberAdd', (member)  => { 
+  let channelId = '814448374790225980'; 
+  let embed = new Discord.MessageEmbed()
+  .setTitle('member joined!')
+  .setDescription(`${member.user.tag} join`)
+  .setTimestamp()
+  client.channels.cache.get(channelId).send(embed)
+})
