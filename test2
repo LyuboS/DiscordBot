@@ -1,3 +1,6 @@
+let Discord = require("discord.js");
+let Client = new Discord.Client();
+
 
 client.on('guildMemberAdd', (member)  => { 
   let channelId = '814448374790225980'; 
@@ -7,3 +10,7 @@ client.on('guildMemberAdd', (member)  => {
   .setTimestamp()
   client.channels.cache.get(channelId).send(embed)
 })
+
+
+Client.login("")
+
